@@ -1,10 +1,13 @@
 console.log("Hello World!");
 // 1. Create an array called favoriteFoods with at least 6 foods you love.
+let favoriteFoods = ["Hot Dogs", "Spaghetti", "Pizza", "Steak", "Lobster", "Biscuits and Gravy"];
 
 
 
 // 2. Loop through the list and print: "One of my favorite foods is ______."
-
+for (let i = 0; i < favoriteFoods.length; i++){
+  console.log("One of my favorite foods is " + favoriteFoods[i] + ".");
+}
 
 
 
@@ -13,7 +16,9 @@ console.log("Hello World!");
 // "My #1 favorite food is Ramen" (copy/paste for all items)
 // "My #2 favorite food is Sushi"
 // ...etc.
-
+for (let i = 0; i < favoriteFoods.length; i++){
+  console.log("My #" + (i + 1) + " favorite food is " + favoriteFoods[i]);
+}
 
 
 
@@ -22,7 +27,6 @@ console.log("Hello World!");
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
-
 
 
 
@@ -38,8 +42,9 @@ let friendFavorites = [
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Pasta" would be.
 
 
-
 // 6. Store the result in an array called foodsWithA. Print out the array.
+
+
 
 
 
@@ -55,5 +60,7 @@ let friendFavorites = [
 // "There are more long-named foods." OR "There are more short-named foods."
 
 
+
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
+
