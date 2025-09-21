@@ -107,9 +107,11 @@ for (let i = 0; i < friendFavorites.length; i++){
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+// Print the two arrays
 console.log(longFoodNames);
 console.log(shortFoodNames);
 
+// Use conditions to determine which array is longer and print a message accordingly
 if (longFoodNames.length > shortFoodNames.length){
   console.log("There are more long-named foods.");
 } else if (shortFoodNames.length > longFoodNames.length) {
@@ -121,11 +123,20 @@ if (longFoodNames.length > shortFoodNames.length){
 
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
+// Declare and assign longestFoodName to an empty string, whose length is 0, of course
 let longestFoodName = "";
+// Iterate through friendFavorites
 for (let i = 0; i < friendFavorites.length; i++){
+  // Condition to determine whether the current food name is longer than 
+  // the current value of longestFoodName
   if (friendFavorites[i].length > longestFoodName.length){
+    // Assigns the current food name to longestFoodName only if the current food name is 
+    // longer than longestFoodName
     longestFoodName = friendFavorites[i];
   }
 }
+
+// Having found the longest name, prints the message, concatenating strings to include
+// the value of longestFoodName and the value of longestFoodName.length
 console.log("The longest food name in the list is " + longestFoodName 
   + " with " + longestFoodName.length + " characters.");
