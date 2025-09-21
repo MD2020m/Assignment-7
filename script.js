@@ -27,10 +27,18 @@ for (let i = 0; i < favoriteFoods.length; i++){
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
+function printFoodRecommendation(foodName){
+  console.log("Have you ever tried " + foodName + "?");
+  console.log("I always recommend " + foodName + " to friends.");
+  console.log("Trust me -" + foodName + " is delicious.");
+}
 
 
 
 // 4b. Call the function at least 3 times
+printFoodRecommendation("hamburger steak");
+printFoodRecommendation(favoriteFoods[3]);
+printFoodRecommendation("shrimp");
 
 
 
@@ -40,9 +48,18 @@ let friendFavorites = [
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Pasta" would be.
+for (let i = 0; i < friendFavorites.length; i++){
+  if (friendFavorites[i].includes("a")){
+    console.log(friendFavorites[i]);
+  }
+}
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
+let foodsWithA = friendFavorites.filter(function(foodName){
+  return foodName.includes("a");
+})
+console.log(foodsWithA);
 
 
 
