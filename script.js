@@ -5,6 +5,7 @@ let favoriteFoods = ["Hot Dogs", "Spaghetti", "Pizza", "Steak", "Lobster", "Bisc
 
 
 // 2. Loop through the list and print: "One of my favorite foods is ______."
+// Loop through array using a for loop
 for (let i = 0; i < favoriteFoods.length; i++){
   console.log("One of my favorite foods is " + favoriteFoods[i] + ".");
 }
@@ -28,6 +29,7 @@ for (let i = 0; i < favoriteFoods.length; i++){
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
 function printFoodRecommendation(foodName){
+  // Reference foodName and concatenate its value with the strings to print
   console.log("Have you ever tried " + foodName + "?");
   console.log("I always recommend " + foodName + " to friends.");
   console.log("Trust me -" + foodName + " is delicious.");
@@ -48,17 +50,29 @@ let friendFavorites = [
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Pasta" would be.
+// Loop through friendFavorites using a for loop
 for (let i = 0; i < friendFavorites.length; i++){
+  // Condition to check whether each food name contains "a"
   if (friendFavorites[i].includes("a")){
+    // Prints the current food name only if the above condition evaluates to true
     console.log(friendFavorites[i]);
   }
 }
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
-let foodsWithA = friendFavorites.filter(function(foodName){
-  return foodName.includes("a");
-})
+// Declare and create an empty array
+let foodsWithA = [];
+
+// Iterate through friendFavorites using a for loop
+for (i = 0; i <  friendFavorites.length; i++){
+  // Condition to check if the current food name includes "a"
+  if (friendFavorites[i].includes("a")){
+    // push the current food name into foodsWithA only if the food name includes "a"
+    foodsWithA.push(friendFavorites[i]);
+  }
+}
+// Print foodsWithA
 console.log(foodsWithA);
 
 
@@ -66,15 +80,29 @@ console.log(foodsWithA);
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
-let longFoodNames = friendFavorites.filter(function(foodName){
-  return foodName.length > 6;
-})
+// Declare empty array, longFoodNames
+let longFoodNames = [];
+// Iterate through friendFavorites
+for (let i = 0; i < friendFavorites.length; i++){
+  // Condition to check if food name is longer than 6 characters
+  if (friendFavorites[i].length > 6){
+    // Push the current food name into longFoodNames only if it is longer than 6 characters
+    longFoodNames.push(friendFavorites[i]);
+  }
+}
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
-let shortFoodNames = friendFavorites.filter(function(foodName){
-  return foodName.length < 6;
-})
+// Declare shortFoodNames and assign it as an empty array
+let shortFoodNames = [];
+// Iterate through friendFavorites
+for (let i = 0; i < friendFavorites.length; i++){
+  // Condition to see if a food name is shorter than 6 characters
+  if (friendFavorites[i].length < 6){
+    // Push current food name into shortFoodNames if it is shorter than 6 characters
+    shortFoodNames.push(friendFavorites[i]);
+  }
+}
 
 
 // 9. Print both arrays and compare:
